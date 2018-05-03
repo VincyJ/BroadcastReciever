@@ -28,7 +28,7 @@ public class MyReciever extends BroadcastReceiver {
             }
         }*/
 
-        Toast.makeText(context, "Don't panik but your time is up!!!!.",
+        Toast.makeText(context, " Don't panik but your time " + intent.getIntExtra("time", 0) + " is up!!!!.",
                 Toast.LENGTH_LONG).show();
         // Vibrate the mobile phone
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);

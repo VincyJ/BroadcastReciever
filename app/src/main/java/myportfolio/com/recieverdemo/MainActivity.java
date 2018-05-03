@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         EditText text = (EditText) findViewById(R.id.time);
         int i = Integer.parseInt(text.getText().toString());
         Intent intent = new Intent(this, MyReciever.class);
+        intent.putExtra("time", i);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 this.getApplicationContext(), 234324243, intent, 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
